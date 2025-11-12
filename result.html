@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crop Yield — Result</title>
+
+  <!-- Montserrat font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="resultWrapper" class="result-wrapper">
+    <header class="result-header">
+      <div class="container">
+        <h1 id="resultCrop">Predicted Yield</h1>
+        <button id="backHome" class="btn ghost">Back to Home</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="result-top">
+        <div class="yield-card">
+          <h2>Predicted Yield</h2>
+          <div id="predictedText" class="predicted-value">—</div>
+          <div id="predictedSub" class="predicted-sub">tons / hectare</div>
+        </div>
+
+        <div class="ai-card">
+          <h3>AI Summary & Suggestions</h3>
+          <div id="aiSummary" class="ai-summary">Generating...</div>
+        </div>
+      </section>
+
+      <section class="charts">
+        <canvas id="lineChart" height="140"></canvas>
+        <canvas id="barChart" height="140"></canvas>
+        <canvas id="radarChart" height="140"></canvas>
+      </section>
+
+      <section class="history-section">
+        <h3>Saved Predictions</h3>
+        <div id="savedList"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">CropYield🌱 — Chart.js</div>
+    </footer>
+  </div>
+
+  <script src="model.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
